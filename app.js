@@ -16,7 +16,7 @@ function createWindow () {
 
   mainWindow.maximize()
   mainWindow.setMenuBarVisibility(false)
-  mainWindow.loadFile('app/html/app.html')
+  mainWindow.loadFile('app/public/html/app.html')
   mainWindow.once("ready-to-show", () => {
     mainWindow.show();
   })
