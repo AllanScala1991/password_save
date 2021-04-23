@@ -1,11 +1,12 @@
 const passwordModel = require('../models/password');
 
-function CreatePassword (group, image, login, password,callback) {
+function CreatePassword (group, image, name, login, password,callback) {
     if (group && image && login && password){
 
         passwordModel.create({
             Group : group,
             Image : image,
+            Name: name,
             Login : login,
             Password : password
         }).then(data => {
