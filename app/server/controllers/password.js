@@ -1,5 +1,3 @@
-
-
 const passwordModel = require('../models/password');
 
 function CreatePassword (group, image, login, password,callback) {
