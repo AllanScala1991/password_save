@@ -1,10 +1,11 @@
 const groupModel = require("../models/groups");
 
-function CreateGroup (name, callback) {
+function CreateGroup (name, icon, callback) {
 
-    if (name){
+    if (name && icon){
         groupModel.create({
-            Name: name
+            Name: name,
+            Icon: icon
         }).then(data => {
 
             if(data === 0){
@@ -25,4 +26,20 @@ function CreateGroup (name, callback) {
     
 }
 
-module.exports = CreateGroup;
+function searchAllGroup (callback) {
+    
+    groupModel.findAll({
+        raw: true,
+    }).then(data => {
+        if (data.length > 0){
+            callback(data, data.length);
+        }else{
+            callback("Nenhum grupo foi registrado.", data.length);
+        }
+    }).catch(err => {
+        callback(`Ocorreu um erro desconhecido: ${err}`, 0);
+    })
+
+}
+
+module.exports = {CreateGroup, searchAllGroup};
