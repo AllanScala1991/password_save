@@ -1,6 +1,6 @@
 window.$ = window.jQuery = require('jquery');
-const GROUPS = require('../../server/controllers/groups');
-const PASSWORDS = require('../../server/controllers/password');
+var GROUPS = require('../../server/controllers/groups');
+var PASSWORDS = require('../../server/controllers/password');
 
 
 $(document).ready(() => {

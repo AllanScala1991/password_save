@@ -1,5 +1,5 @@
 window.$ = window.jQuery = require('jquery');
-const GROUPS = require('../../server/controllers/groups');
+var GROUPS = require('../../server/controllers/groups');
 
 
 $(document).ready(() => {
@@ -29,7 +29,7 @@ function searchAllGroup(data, dataLength){
 
             var label = document.createElement('label');
             label.className = 'totalText'
-            label.textContent = "10" // NUMERO DE REGISTROS POR GRUPO, FAZER UMA CHAMADA PARA RECEBER ESSE VALOR
+            label.textContent = group.Name 
 
             internalBox1.appendChild(img);
             internalBox2.appendChild(label);

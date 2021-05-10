@@ -192,3 +192,77 @@ body{
     text-align: center;
     color: rgba(0,0,0,0.7);
 }
+
+.groups_container{
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    overflow: hidden;
+}
+
+.groupsSelect{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.iconImg{
+    width: 32px;
+    height: 32px;
+    margin: 1vh 2vh;
+    transition: width 1s, height  1s;
+}
+
+.iconImg:hover{
+    cursor: pointer;
+    width: 64px;
+    height: 64px;
+    transition: width 1s, height  1s;
+}
+
+.iconSelect{
+    margin-right: 5vh;
+}
+
+.groupInfo{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    overflow: hidden;
+}
+
+.groupInputs{
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 2vh auto;
+}
+
+.imgSelectedShow{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+.showIcon{
+    width: 128px;
+    height: 128px;
+}

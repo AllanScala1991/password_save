@@ -14,15 +14,15 @@
                 <img src="../img/lock-32.png">
             </div>
 
-            <div class="box_menu btn_menu" id="btn_home">
+            <div class="box_menu btn_menu" id="btn_home" onclick="homeLoad()">
                 <img src="../img/home-4-32.png">
             </div>
 
-            <div class="box_menu btn_menu" id="btn_newPassword">
+            <div class="box_menu btn_menu" id="btn_newPassword" onclick="newPasswordLoad()">
                 <img src="../img/add-file-32.png">
             </div>
 
-            <div class="box_menu btn_menu" id="btn_newGroup">
+            <div class="box_menu btn_menu" id="btn_newGroup" onclick="newGroupLoad()">
                 <img src="../img/add-list-32.png">
             </div>
 
@@ -38,50 +38,15 @@
 
         <div id="app_center">
             <div class="title_container">
-                REGISTRO DE NOVA SENHA
+                PESQUISAR SENHAS
             </div>
-
+            
             <div class="center_container">
-
-               <div class="pass_container">
-
-                    <div class="pass_info">
-                        <label class="pass_label">Grupo:</label>
-                        <select class="pass_select" id="pass_group_select">
-                            <option selected value="Sem Grupo">Sem Grupo</option>
-                        </select>
-                    </div>
-
-                    <div class="pass_info">
-                        <label class="pass_label">Nome:</label>
-                        <input type="text" class="pass_select" id="pass_name" placeholder="Dê um nome a essa senha">
-                    </div>
-
-                    <div class="pass_info">
-                        <label class="pass_label">Usuário/Email:</label>
-                        <input type="text" class="pass_select" id="pass_user" placeholder="Digite seu usuário">
-                    </div>
-
-                    <div class="pass_info">
-                        <label class="pass_label">Senha:</label>
-                        <input type="password" class="pass_select" id="pass_password" placeholder="Digite sua senha">
-                    </div>
-
-                    <div class="pass_info">
-                        <button class="pass_btn saveColor" id="pass_save_btn" onclick="saveNewPassword()">SALVAR</button>
-                        <button class="pass_btn clearColor" id="pass_clear_btn" onclick="clearInputs()">LIMPAR</button>
-                    </div>
-
-                    <div class="pass_info">
-                        <label class="pass_label message_label" id="pass_message_label"></label>
-                    </div>
-
-               </div>   
-
+               
             </div>
         </div>
-
-        <script src="../js/new_password.js"></script>
+        
+    
     </div>
 
     <script src="../js/app.js"></script>

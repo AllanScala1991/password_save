@@ -1,0 +1,38 @@
+<div class="title_container">
+    REGISTRO DE NOVOS GRUPOS
+</div>
+
+<div class="center_container">
+    <div class="groups_container">
+        <h2>Selecione um icone para o grupo:</h2>
+        <div class="groupsSelect">
+            <img src="../img/bank-4-128.png" class="iconImg" id="teste" onclick="imgSelected('../img/bank-4-128.png')">
+            <img src="../img/computer-128.png" class="iconImg" onclick="imgSelected('../img/computer-128.png')">
+            <img src="../img/credit-card-2-128.png" class="iconImg" onclick="imgSelected('../img/credit-card-2-128.png')">
+            <img src="../img/email-3-128.png" class="iconImg" onclick="imgSelected('../img/email-3-128.png')">
+            <img src="../img/facebook-3-128.png" class="iconImg" onclick="imgSelected('../img/facebook-3-128.png')">
+            <img src="../img/instagram-3-128.png" class="iconImg" onclick="imgSelected('../img/instagram-3-128.png')">
+            <img src="../img/joystick-128.png" class="iconImg" onclick="imgSelected('../img/joystick-128.png')">
+            <img src="../img/pinterest-3-128.png" class="iconImg" onclick="imgSelected('../img/pinterest-3-128.png')">
+            <img src="../img/twitter-3-128.png" class="iconImg" onclick="imgSelected('../img/twitter-3-128.png')">
+            <img src="../img/youtube-3-128.png" class="iconImg" onclick="imgSelected('../img/youtube-3-128.png')">
+        </div>
+
+        <div class="groupInfo">
+            <div class="groupInputs">
+                <label class="pass_label">Nome do grupo:</label>
+                <input type="text" class="pass_select" placeholder="Informe o nome do grupo de senhas.." id="group_input_name">
+            </div>
+
+            <div class="groupInputs">
+                <button class="pass_btn saveColor" id="group_btn_save" onclick="saveGroup()">SALVAR</button>
+                <button class="pass_btn clearColor" id="group_btn_clear" onclick="clearGroup()">LIMPAR</button>
+            </div>
+
+            <div class="pass_info">
+                <label class="pass_label message_label" id="group_message_label"></label>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/group.js"></script>
