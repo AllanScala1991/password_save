@@ -266,3 +266,94 @@ body{
     width: 128px;
     height: 128px;
 }
+
+.searchContainer{
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    overflow: hidden;
+}
+
+.inputFilter{
+    width: 100%;
+    height: 6vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.searchInput{
+    width: 40%;
+    height: 4vh;
+    outline: 0;
+    border: none;
+    border-radius: 1vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2.8vh;
+    text-align: left;
+    margin: 0 1vh;
+    text-align: center;
+}
+
+.searchButton{
+    width: 15%;
+    height: 4.5vh;
+    outline: 0;
+    border: none;
+    border-radius: 1vh;
+    background-color: rgb(56, 56, 238);
+    color: whitesmoke;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2.5vh;
+}
+
+.searchButton:hover{
+    cursor: pointer;
+    background-color: rgb(50, 50, 209);
+}
+
+.resultFilter{
+    width: 100%;
+    max-height: 78vh;
+    display: inline-block;
+    overflow-y: scroll;
+    border-top: 0.3vh solid black;
+}
+
+.boxResult{
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    overflow: hidden;
+}
+
+.boxColumn{
+    width: 20%;
+    height: 4vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2.5vh;
+}
+
+.boxTitle{
+    background-color: whitesmoke;
+    font-size: 2.8vh;
+    font-weight: bold;
+}
+
+.searchIcon{
+    width: 16px;
+    height: 16px;
+    margin: 0 0.5vh;
+}
