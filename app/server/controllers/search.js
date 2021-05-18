@@ -1,4 +1,4 @@
-const passwordSearch = require("./password");
+const passwordSearch = require("../models/password");
 
 function searchByName(name, callback){
     if (name){
@@ -8,14 +8,26 @@ function searchByName(name, callback){
                 Name: name
             }
         }).then(data => {
-            callback({"status" : true, "data" : data});
+            if (data.length > 0){
+                callback({"status" : true, "data" : data});
+            }
+            else{
+                callback({"status": false, "message": "Nenhuma senha encontrada."})
+            }
+            
 
         }).catch(error => {
             callback({"status": false, "message" : `Erro ao localizar esse password: ${error}`});
         });
 
     }else{
-        callback({"status": false, "message": "Preencha o campo selecionado."})
+        passwordSearch.findAll({
+            raw: true
+        }).then(data => {
+            callback({"status": true, "data": data});
+        }).catch(error => {
+            callback({"status": false, "message": `Erro desconhecido: ${error}`});
+        })
     }
 }
 
