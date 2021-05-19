@@ -63,11 +63,13 @@ function SearchCallback(response){
 
             var imgEdit = document.createElement("img");
             imgEdit.src = "../img/edit-32.png";
-            imgEdit.className = "searchIcon"  // Verificar como passar o id 
+            imgEdit.className = "searchIcon" ;
+            imgEdit.setAttribute("onclick", `editPassword(${response.data[i].id})`)
 
             var imgDelete = document.createElement("img");
             imgDelete.src = "../img/delete-32.png";
             imgDelete.className = "searchIcon"
+            imgDelete.setAttribute("onclick", `deletePassword(${response.data[i].id})`)
 
             boxEdit.appendChild(imgEdit);
             boxEdit.appendChild(imgDelete)
@@ -79,7 +81,12 @@ function SearchCallback(response){
             resultFilter.appendChild(boxResult);
         }
     }else{
-        alert(response.message)
+        if (response.message == undefined){
+            $('.resultFilter').empty()
+        }else{
+            alert(response.message)
+        }
+        
     }
 }
 
@@ -89,10 +96,21 @@ function Search(){
     $('.resultFilter').empty()
 }
 
-function editPassword(id){
-    console.log(id.id)
+function fillEdit(data){
+    // ABRIR O MODAL DE EDITAR E PREENCHER OS CAMPOS COM OS DADOS RECEBIDOS DO BACKEND
 }
 
+function editPassword(id){
+    searchController.searchByID(id, fillEdit)
+}
+
+
+
 function deletePassword(id){
-    console.log(id)
+    function reponseDelete(data){
+        alert(data.message);
+        Search();
+    }
+
+    searchController.deletePassword(id, reponseDelete);
 }

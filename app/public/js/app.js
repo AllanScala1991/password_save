@@ -2,7 +2,7 @@ window.$ = window.jQuery = require('jquery');
 
 
 $(document).ready(() => {
-    //$("#app_center").load('./home.html');
+    $("#app_center").load('./home.html');
 })
 
 
@@ -19,4 +19,9 @@ function newPasswordLoad(){
 function newGroupLoad() {
     $("#app_center").empty();
     $("#app_center").load('./group.html');
+}
+
+function searchLoad(){
+    $("#app_center").empty();
+    $("#app_center").load("./search.html")
 }
