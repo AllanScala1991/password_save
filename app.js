@@ -34,5 +34,5 @@ app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') app.quit()
 })
 
-//electron-packager . --platform=win32  --archi=ia32 --icon="C:\Users\Allan Scala\Documents\Application\app\img\banknotes-32.ico"
-//electron-packager . --platform=darwin  --arch=x64 --icon="/Users/admin/Documents/Projetos/my-money-application/app/img/moneybox-32.icns"
+//electron-packager . --platform=win32  --archi=ia32 --icon="path icon"
+//electron-packager . --platform=darwin  --arch=x64 --icon="path icon"
