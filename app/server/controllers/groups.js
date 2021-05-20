@@ -42,4 +42,24 @@ function searchAllGroup (callback) {
 
 }
 
-module.exports = {CreateGroup, searchAllGroup};
+function deleteGroup (id, callback){
+    if (id){
+        groupModel.destroy({
+            where: {
+                id: id
+            }
+        }).then(data => {
+            if (data != 0){
+                callback({"message": "Grupo deletado com sucesso."})
+            }else{
+                callback({"message" : "Erro ao deletar o grupo, tente novamente."})
+            }
+        }).catch(error => {
+            callback({"message": `Erro desconhecido: ${error}`})
+        })
+    }else{
+        callback({"message": "ID não encontrado."})
+    }
+}
+
+module.exports = {CreateGroup, searchAllGroup, deleteGroup};

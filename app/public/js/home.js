@@ -6,6 +6,20 @@ $(document).ready(() => {
    GROUPS.searchAllGroup(searchAllGroup);
 })
 
+function deleteGroup(id){
+    var getConfirm = confirm("Excluir esse grupo?")
+
+    function responseDelete(response){
+        alert(response.message)
+        $(".center_container").empty()
+        GROUPS.searchAllGroup(searchAllGroup);
+    }
+
+    if (getConfirm){
+        GROUPS.deleteGroup(id, responseDelete)
+    }
+}
+
 
 function searchAllGroup(data, dataLength){
     if(dataLength <= 0){
@@ -16,6 +30,7 @@ function searchAllGroup(data, dataLength){
         data.forEach(function (group, index){
             var box_result = document.createElement('div');
             box_result.className = "box_result";
+            box_result.setAttribute("onclick", `deleteGroup(${group.id})`)
 
             var internalBox1 = document.createElement('div');
             internalBox1.className = 'internalBox';

@@ -1,7 +1,7 @@
 const passwordModel = require('../models/password');
 
 function CreatePassword (group, name, login, password,callback) {
-    if (group && login && password){
+    if (group && name && login && password){
         passwordModel.create({
             Group : group,
             Name: name,

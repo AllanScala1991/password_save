@@ -1,6 +1,7 @@
 window.$ = window.jQuery = require('jquery');
 var GROUPS = require('../../server/controllers/groups');
 
+
 var imgPath = ""
 
 function imgSelected(self){
@@ -22,18 +23,13 @@ function imgSelected(self){
 
 }
 
-
 function saveGroup(){
     var groupName = document.querySelector("#group_input_name").value;
 
     function callback(message){
-        document.querySelector("#group_message_label").innerHTML = message;
-
-        function clearMessage(){
-            document.querySelector("#group_message_label").innerHTML = ""
-        }
-
-        setTimeout(clearMessage, 3000);
+        alert(message);
+        $("#app_center").empty()
+        $("#app_center").load('./group.html')
     }
 
     GROUPS.CreateGroup(groupName, imgPath, callback)

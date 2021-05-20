@@ -72,14 +72,13 @@ function deletePassword(id, callback){
     }
 }
 
-function editPassword(id, group, name, user, password, callback){
-    if (id && group && name && user && password){
+function editPassword(id, name, user, password, callback){
+    if (id && name && user && password){
         passwordSearch.update({
-            Group: group,
             Name: name,
             Login: user,
-            Password: password,
-            where: {
+            Password: password},
+            {where: {
                 id: id
             }
         }).then(data => {

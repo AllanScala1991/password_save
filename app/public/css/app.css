@@ -88,7 +88,7 @@ body{
     justify-content: start;
     overflow: hidden;
     background-color: whitesmoke;
-    margin: 1vh 4.2vh;
+    margin: 1vh 3vh;
     border-radius: 1vh;
 }
 .box_result:hover{
@@ -145,7 +145,7 @@ body{
 }
 
 .pass_select{
-    width: 30%;
+    width: 40%;
     height: 4vh;
     outline: 0;
     border: none;
@@ -356,4 +356,62 @@ body{
     width: 16px;
     height: 16px;
     margin: 0 0.5vh;
+}
+
+.editContainer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.8);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -999;
+    visibility: hidden;
+}
+
+.infoEditContainer{
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-color: whitesmoke;
+    position: relative;
+    border-radius: 1vh;
+}
+
+.editBoxTitle{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    overflow: hidden;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 8vh;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 5vh;
+}
+
+.infoEditBox{
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 2vh auto;
+}
+
+#edit_id{
+    background-color: transparent;
 }

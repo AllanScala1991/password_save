@@ -96,15 +96,49 @@ function Search(){
     $('.resultFilter').empty()
 }
 
-function fillEdit(data){
-    // ABRIR O MODAL DE EDITAR E PREENCHER OS CAMPOS COM OS DADOS RECEBIDOS DO BACKEND
+function fillEdit(response){
+    var modal = document.querySelector(".editContainer");
+    var groupSelector = document.querySelector("#editGroupName");
+    var idSelector = document.querySelector("#edit_id");
+    var nameSelector = document.querySelector("#edit_name");
+    var userSelector = document.querySelector("#edit_email");
+    var passwordSelector = document.querySelector("#edit_password");
+
+    modal.style.zIndex = "999";
+    modal.style.visibility = "visible";
+    groupSelector.innerHTML = response.data[0].Group;
+    idSelector.value = response.data[0].id;
+    nameSelector.value = response.data[0].Name;
+    userSelector.value = response.data[0].Login;
+    passwordSelector.value = response.data[0].Password;
 }
 
 function editPassword(id){
     searchController.searchByID(id, fillEdit)
 }
 
+function editSave(){
+    var id = document.querySelector("#edit_id").value;
+    var name = document.querySelector("#edit_name").value;
+    var user = document.querySelector("#edit_email").value;
+    var password = document.querySelector("#edit_password").value;
 
+    console.log(id)
+
+    function responseEdit(response){
+        alert(response.message);
+        editClose();
+        Search();
+    }
+
+    searchController.editPassword(id, name, user, password, responseEdit)
+}
+
+function editClose(){
+    var modal = document.querySelector(".editContainer");
+    modal.style.zIndex = "-999";
+    modal.style.visibility = "hidden";
+}
 
 function deletePassword(id){
     function reponseDelete(data){
